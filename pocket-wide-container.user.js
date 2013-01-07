@@ -11,3 +11,5 @@ style.innerHTML = [
     '#page #content .wrapper.tag_sidebar_holder { background-image: none }'
 ].join('\n')
 document.head.appendChild(style)
+
+// I'm a comment
