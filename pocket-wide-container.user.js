@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Pocket Wide Container
 // @match https://getpocket.com/a/queue/
-// @version 1.2
+// @version 1.3
 // ==/UserScript==
  
 var style = document.createElement('style')
@@ -11,5 +11,3 @@ style.innerHTML = [
     '#page #content .wrapper.tag_sidebar_holder { background-image: none }'
 ].join('\n')
 document.head.appendChild(style)
-
-// I'm a comment
