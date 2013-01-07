@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Pocket Wide Container
 // @match https://getpocket.com/a/queue/
-// @version 1.1
+// @version 1.2
 // ==/UserScript==
  
 var style = document.createElement('style')
