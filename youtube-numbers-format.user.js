@@ -4,6 +4,12 @@
 // @match http://www.youtube.com/watch?*
 // ==/UserScript==
  
+var formatNumbers = function(string) {
+    return string.replace(/[0-9]+/, function(matched) {
+        return formatNumber(matched)
+    })
+}
+
 var formatNumber = function(input) {
     var output = ''
     while (input.length) {
@@ -16,5 +22,6 @@ var formatNumber = function(input) {
 
 ;['.watch-view-count', '.likes-count', '.dislikes-count'].forEach(function(selector) {
     var el = document.querySelector(selector)
-    el.innerText = formatNumber(el.innerText)
+    el.innerText = formatNumbers(el.innerText)
 })
+
