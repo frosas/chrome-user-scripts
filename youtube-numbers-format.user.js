@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name YouTube Numbers Format
-// @version 0.1
+// @version 0.2
 // @match http://www.youtube.com/watch?*
 // ==/UserScript==
  
@@ -23,7 +23,8 @@ Array.prototype.groupByLength = function(length) {
     return grouped
 }
 
-;['.watch-view-count', '.likes-count', '.dislikes-count'].forEach(function(selector) {
-    var el = document.querySelector(selector)
-    el.innerText = formatNumbers(el.innerText)
+;['.watch-view-count', '.likes-count', '.dislikes-count', '.view-count'].forEach(function(selector) {
+    Array.prototype.forEach.call(document.querySelectorAll(selector), function(element) {
+        element.innerText = formatNumbers(element.innerText)
+    })
 })
