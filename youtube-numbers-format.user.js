@@ -13,7 +13,7 @@ var formatNumber = function(number) {
     for (var i = 0; i < number.length; i++) {
         if (i && i % 3 == 0) formatted = '.' + formatted
         formatted = number[number.length - 1 - i] + formatted
- }
+    }
     return formatted
 }
 
