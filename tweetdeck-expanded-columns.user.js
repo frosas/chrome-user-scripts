@@ -17,12 +17,12 @@ var onColumnsAvailable = function(callback) {
     
 onColumnsAvailable(function(columns) {
     var columnMarginWidth = .5
-    var columnWidth = (100 - columnMarginWidth * (1 + columns.length)) / columns.length
+    var columnMarginsWidth = columnMarginWidth * (1 + columns.length)
+    var columnWidth = (100 - columnMarginsWidth) / columns.length
     var style = document.createElement('style')
     style.innerHTML = [
-        '#columns { padding: 0 }',
-        '#columns .column { width: ' + columnWidth + '%; margin: ' + columnMarginWidth + '%; margin-left: 0; min-width: 250px }',
-        '#columns .column:first-child { margin-left: ' + columnMarginWidth + '% }'
+        '.app-columns { padding: 0 }',
+        '.app-columns .column { width: ' + columnWidth + '%; margin: ' + columnMarginWidth + '%; margin-right: 0; min-width: 250px; box-sizing: border-box }'
     ].join('\n')
     document.head.appendChild(style)
 })
