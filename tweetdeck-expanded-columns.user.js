@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name TweetDeck Expanded Columns
-// @version 0.1
+// @version 0.1.1
 // @match https://web.tweetdeck.com/
 // ==/UserScript==
  
