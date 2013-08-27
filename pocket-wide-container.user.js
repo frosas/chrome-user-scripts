@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Pocket Wide Container
-// @match https://getpocket.com/a/queue/
-// @version 1.4
+// @match http*://getpocket.com/a/queue/
+// @version 1.4.1
 // @updateURL https://raw.github.com/frosas/chrome-user-scripts/master/pocket-wide-container.user.js
 // ==/UserScript==
  
