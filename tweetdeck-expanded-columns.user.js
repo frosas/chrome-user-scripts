@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name TweetDeck Expanded Columns
 // @version 0.1.1
-// @match https://web.tweetdeck.com/
+// @match https://tweetdeck.twitter.com/
 // ==/UserScript==
  
 // TODO Update widths when columns are added or removed
