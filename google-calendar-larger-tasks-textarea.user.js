@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name Google Calendar Larger Tasks Textarea
-// @version 0.1
-// @match http*://www.google.com/calendar/render
+// @version 0.1.1
+// @match *://www.google.com/calendar/render*
 // ==/UserScript==
  
 setInterval(function() {
