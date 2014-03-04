@@ -16,12 +16,13 @@ document.head.appendChild(style)
 new MutationObserver(function(mutations) { 
     mutations.forEach(function(mutation) { 
         ;[].forEach.call(mutation.addedNodes || [], function(node) {
-            if (node.classList.contains('link')) {
-                node.addEventListener('click', function(event) { 
-                    event.stopPropagation()
-                    open(node.querySelector('.original_url').href)
-                })
-            }
+            [].forEach.call(node.parentNode.querySelectorAll('.original_url'), function(a) {
+                var link = (function(node) { 
+                    while (!node.classList.contains('link')) node = node.parentNode; 
+                    return node 
+                })(a)
+                link.href = a.href
+            })
         }) 
     }) 
 }).observe(document, {childList: true, subtree: true})
