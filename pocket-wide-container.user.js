@@ -16,11 +16,15 @@ document.head.appendChild(style)
 new MutationObserver(function(mutations) { 
     mutations.forEach(function(mutation) { 
         ;[].forEach.call(mutation.addedNodes || [], function(node) {
-            [].forEach.call(node.parentNode.querySelectorAll('.original_url'), function(a) {
+            ;[].forEach.call(node.parentNode.querySelectorAll('.original_url'), function(a) {
                 var link = (function(node) { 
                     while (!node.classList.contains('link')) node = node.parentNode; 
                     return node 
                 })(a)
+                ;[].forEach.call(link.classList, function(className) { 
+                    if (className.match(/^start_/)) link.classList.remove(className) 
+                })
+                link.classList.add('start_webview')
                 link.href = a.href
             })
         }) 
